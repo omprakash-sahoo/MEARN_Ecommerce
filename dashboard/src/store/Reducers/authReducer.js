@@ -5,11 +5,13 @@ export const admin_login = createAsyncThunk(
   "auth/admin_login",
   async (info) => {
     console.log(info);
-    // try {
-    //   const { data } = await api.post("admin-login", info, {
-    //     withCredentials: true,
-    //   });
-    // } catch (err) {}
+    try {
+      const { data } = await api.post("admin_login", info, {
+        withCredentials: true,
+      });
+    } catch (err) {
+      console.log(err.response.data);
+    }
   }
 );
 
