@@ -8,19 +8,11 @@ const Register = lazy(() => import("../../views/auth/Register"));
 const publicRoutes = [
   {
     path: "/login",
-    element: (
-      <Suspense>
-        <Login />
-      </Suspense>
-    ),
+    element: <Login />,
   },
   {
     path: "/register",
-    element: (
-      <Suspense>
-        <Register />
-      </Suspense>
-    ),
+    element: <Register />,
   },
   {
     path: "/admin/login",
